@@ -1,0 +1,24 @@
+layer:
+  id: "gas"
+  description: |
+      [Gasmarker Pipeline Maerker](https://wiki.openstreetmap.org/wiki/Key:marker) and [Old Variant](https://wiki.openstreetmap.org/wiki/Tag:pipeline%3Dmarker)
+  buffer_size: 64
+  srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+  fields:
+    pipeline: Value of main tag pipeline
+    marker: Value of main tag marker
+    pipeline_ref: Reference number of the marked pipeline
+    substance: stubstance of the pipeline (gas or null)
+    operator: operator of pipeline
+    ref: Reference number on marker    
+  datasource:
+    geometry_field: geometry
+    key_field: osm_id
+    key_field_as_attribute: no
+    srid: 900913
+    query: (SELECT osm_id, geometry, pipeline, marker, substance, pipeline_ref, ref, operator FROM layer_gas(!bbox!, z(!scale_denominator!), !pixel_width!)) AS t
+schema:
+  - ./gas.sql
+datasources:
+  - type: imposm3
+    mapping_file: ./mapping.yaml

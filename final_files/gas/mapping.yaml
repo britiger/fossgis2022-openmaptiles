@@ -1,0 +1,21 @@
+
+tables:
+  gas_point:
+    type: point
+    mappings:
+      new_gas:
+        mapping:
+          marker: [__any__]
+      old_gas:
+        mapping:
+          pipeline: [__any__]
+    columns: 
+      - {name: osm_id, type: id}
+      - {name: geometry, type: geometry}
+      - {key: pipeline, name: pipeline, type: string}
+      - {key: marker, name: marker, type: string}
+      - {key: substance, name: substance, type: string}
+      - {key: utility, name: utility, type: string}
+      - {key: "pipeline:ref", name: pipeline_ref, type: string}
+      - {key: ref, name: ref, type: string}
+      - {key: operator, name: operator, type: string}

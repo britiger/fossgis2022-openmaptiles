@@ -1,0 +1,15 @@
+[submodule "positron-gl-style"]
+	path = positron-gl-style
+	url = https://github.com/openmaptiles/positron-gl-style
+
+[submodule "openmaptiles"]
+	path = openmaptiles
+	url = https://github.com/openmaptiles/openmaptiles
+
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/openmaptiles/fonts
+
+[submodule "maplibre-gl-js"]
+	path = maplibre-gl-js
+	url = https://github.com/maplibre/maplibre-gl-js
