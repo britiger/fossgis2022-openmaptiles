@@ -170,5 +170,5 @@ cp maplibre-gl-js/dist/maplibre-gl.* webdir/
 - `docker run --rm -it -p 8089:8000 -v $(pwd):/tilesets  consbio/mbtileserver`
 - Verfügbare Tiles prüfen: http://localhost:8089/services
 - Alternative: Auspacken der einzelnen Tiles ins `webdir`
-  - Tool: [mbutil]{https://github.com/anilkunchalaece/mbutil}
+  - Tool: [mbutil][https://github.com/anilkunchalaece/mbutil]
   - `mb-util --image_format=pbf openmaptiles/data/tiles.mbtiles webdir/tiles/`
